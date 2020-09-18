@@ -3,9 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+// connexion to database
+const db = 'mongodb+srv://zoutigo:valery54@cluster0.refc9.gcp.mongodb.net/blablachopping?retryWrites=true&w=majority'
+mongoose.connect(db, { useNewUrlParser: true , useUnifiedTopology: true })
+.then(()=> console.log('Connexion etablie à la base de donnée'))
+.catch((err)=> console.log(`Connection ERROR to database : ${err}`))
 
 var app = express();
 
