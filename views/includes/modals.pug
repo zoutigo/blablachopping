@@ -1,0 +1,55 @@
+
+#loginModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title Ravi de vous revoir parmi nous
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        form
+          .form-group
+            label(for='loginInputEmail1') Adresse mail
+            input#loginInputEmail1.form-control(type='email' aria-describedby='emailHelp')
+            small#loginEmailHelp.form-text.text-muted 
+          .form-group
+            label(for='loginInputPassword1') Mot de pass
+            input#loginInputPassword1.form-control(type='password')
+            small#loginPasswordHelp.form-text.text-muted 
+
+          .form-group
+            small#loginHelp.form-text.text-muted 
+         
+      .modal-footer
+        button.btn.btn-warning(type='button' data-dismiss='modal') J'annulle
+        button.btn.btn-success(type='button' disabled) Je me connecte
+
+
+#signinModal.modal.fade(tabindex='-1' aria-labelledby='signinModalLabel' aria-hidden='true')
+  .modal-dialog.modal-dialog-centered.modal-lg
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title Inscrivez vous pour blablater pendant votre shopping
+        button.close(type='button' data-dismiss='modal' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .modal-body
+        form
+          .form-group
+            label(for='signinInputEmail') Email address
+            input#signinInputEmail.form-control(type='email' aria-describedby='emailHelp')
+            small#signinEmailHelp.form-text.text-muted Votre email restera nonyme et ne sera pas communiquée à des tiers.
+            small#signinEmailError.form-text.text-muted 
+          .form-group
+            label(for='signinInputPassword1') Mot de pass
+            input#signInputPassword1.form-control(type='password')
+            small#signinPasswordHelp1.form-text.text-muted Le mot de pass doit contenir au moins 8 caractères dont une majuscule, une minuscule et un chiffre
+            small#signinPassword1Error.form-text.text-muted 
+          .form-group
+            label(for='signinInputPassword2') Mot de pass confirmation
+            input#signinInputPassword2.form-control(type='password')
+            small#signinPasswordHelp2.form-text.text-muted Veillez confirmer le mot de pass
+            small#signinPassword2Error.form-text.text-muted 
+          
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-dismiss='modal') Fermer et annuler
+        button.btn.btn-primary(type='button' disabled) S'inscrire et blablachopper

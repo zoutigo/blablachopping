@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+ 
+   div.container
+      header
+        ul
+          li.logo Blabla.Shopping
+          li#idBlock.idBlock
+            button.btn.btn-info.mrg-3(type='button' data-toggle='modal' data-target='#loginModal') Je me connecte . Bla
+            button.btn.btn-warning(type='button' data-toggle='modal' data-target='#signinModal') Je m'incris . BlaBla
+      
+      nav
+        ul.navList
+          li(id="news") Actualite
+          li(id="messenger") Messagerie privée
+          li(id="shop") Boutique en ligne
+          li(id="chat") Discussion instantanée
+      aside
+        block aside  
+  
